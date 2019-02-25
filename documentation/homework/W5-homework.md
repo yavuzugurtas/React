@@ -17,7 +17,7 @@ Remove parts you don't need. Remove all content in `index.css`, remove the `App.
 
 Get the [books.json](https://gist.githubusercontent.com/fdb/83e8e630b610b35dce9a3088f4832043/raw/422b669b03d3348a6c0f659b79f5d3edbf86a508/books.json) file and store it under `public/books.json`. Verify that you can access this file by going to <http://localhost:3000/books.json>. 
 
-The data was generated using the [Mockaroo](random data generator tool).
+The data was generated using the [Mockaroo](https://mockaroo.com/) random data generator tool.
 
 ### Bootstrap
 
