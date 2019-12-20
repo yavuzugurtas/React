@@ -1,6 +1,0 @@
-.table td {
-  max-width: 40ch;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}

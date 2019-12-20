@@ -2,86 +2,43 @@
 
 ## Agenda
 
-### Controlled Inputs
+The purpose of this class is to teach the student about more advantage React usage and how to connect a React client to a Express-based Node.js server. To make this more realistic (and efficient) the student will be using `create-react-app`, which will make the workflow easier.
 
-- [Documentation: Controlled Components](https://reactjs.org/docs/forms.html#controlled-components)
+The student will learn about `component lifecycle` and and how to use `componentDidMount()`. The student will make an `API call` using this lifecycle method.
 
-- Uncontrolled inputs are almost never useful to us
+Lastly, the student will learn how to connect a React frontend to a Node.js backend.
 
-- For controlled inputs, we must provide _both_:
-  - The value
-  - The onChange event handler
+## Core Concepts
 
-- React controls the state of the input, not the browser
+1. create-react-app
 
-### Simple Form example
+- Generates an fully functional out-of-the-box React environment
+- Solves problem of manually configuring file bundler (like Webpack) or transpiler (Babel)
 
-- [CodePen: Simple form](https://codepen.io/fdb/pen/ZwrqRQ?editors=0010)
+_Explain to the student the problems Webpack (ex. React necessitates file bundling to work) and Babel (ex. React makes use of ES2017+ features that need to be converted into syntax that older browsers can understand) solves_
 
-*Note*: to set up CodePen, click the gear icon in the "JS" tab, then in the "external scripts" add these two external scripts:
+- Improves workflow through `hot reloading`
+- Gives a more realistic folder structure
 
-- `https://unpkg.com/react/umd/react.development.js`
-- `https://unpkg.com/react-dom/umd/react-dom.development.js`
+_Show the student how to setup a basic CRA application_
 
-### Multiple Form Inputs
+2. Component lifecycle
 
-- [Documentation: Handling Multiple Inputs](https://reactjs.org/docs/forms.html#handling-multiple-inputs)
-- [CodePen: Multiple form inputs](https://codepen.io/fdb/pen/pGprPq?editors=0010)
+- Lifecycle methods are part of the `Component` class (React.Component)
+- The purpose of lifecycle methods is to **solve rendering issues** that sometimes can't easily be controlled via state and props
+- 4 groups of lifecycle methods: **mounting**, **updating**, **unmounting** and **errors**
+- Ideally, a React application should work completely only using state and props. Use lifecycle methods as a **last resort**
 
-To avoid duplicating input handling we'll use [computed property names](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names):
+_Show the following [image](https://cdn-images-1.medium.com/max/2000/1*cEWErpe-oY-_S1dOaT1NtA.jpeg) to illustrate the place and purpose of each lifecycle method. Then show how to access the methods in a class-based component_
 
-```
-this.setState({
-  [name]: value
-});
-```
+- API calls are done in `componentDidMount()`
 
-### Lifting State
+_Show example of how to make an API call in `componentDidMount()` and put the data in state. Make use of the following API: `https://reqres.in/api/users`. Then present the data through newly created components_
 
-- [Documentation: Lifting State Up](https://reactjs.org/docs/lifting-state-up.html)
+3. Connecting React with an Express-based Node.js server
 
-- Often, several components need to reflect the same data. In these cases, we lift the shared state up to their closest common ancestor
+- React can be connected to any type of backend (writting in Node.js, Java, Ruby,etc.)
+- A (web) server only serves files to a client. A React frontend, ultimately, is just an HTML file with injected JavaScript Thi HTML is what Express will serve.
+- Connection takes place by calling upon `endpoints`
 
-- The process involves:
-  - Lifting state to the highest ancestor
-  - Passing state back down the tree as props
-  - Passing onChange functions back down the tree as props
-
-- This method works fine for smaller, less complex apps, but can get annoying very fast - this is why we will start looking at state management libraries soon (MobX)
-
-- In typical use cases, it’s okay for forms to have their own local state as they represent “unadded” data
-
-- Every time you have state in your app:
-  - Identify every component that renders something based on that state
-  - Find a common owner component (a single component above all the components that need the state in the hierarchy
-  - Either the common owner or another component higher up in the hierarchy should own the state
-
-- There should be a single “source of truth” for any data that changes in a React application
-
-### Form Frameworks
-
-- [Formik](https://jaredpalmer.com/formik/)
-
-## Examples
-
-### Currency Calculator [Source](https://github.com/HackYourFutureBelgium/React/tree/master/examples/currency-calculator)
-
-### Temperature Conversion
-
-- Follow guide [here](https://reactjs.org/docs/lifting-state-up.html)
-
-- Show example where state needs to be lifted
-
-- Show controlled components with event handlers as props
-
-## In-Class Todo App
-
-### TODOs
-
-- Add liking functionality
-
-- Persist data to localStorage
-
-- Add comment creation functionality
-
-- Lift state to highest-level component
+_Show how to build a simple Express server and React client from scratch, connect them using a single endpoint, and explain every step in the process_

@@ -1,86 +1,79 @@
-> Please help us improve and share your feedback! If you find better tutorials
-or links, please share them by [opening a pull request](https://github.com/HackYourFuture/React/pulls).
+> If you are following the HackYourFuture curriculum we recommend you to start with module 1: [HTML/CSS/GIT](https://github.com/HackYourFuture/HTML-CSS). To get a complete overview of the HackYourFuture curriculum first, click [here](https://github.com/HackYourFuture/curriculum).
 
-# HackYourFuture - React
+> Please help us improve and share your feedback! If you find better tutorials or links, please share them by [opening a pull request](https://github.com/HackYourFuture/React/pulls).
 
-In this 5 week module we will learn React!
+# Module #7 - React.js: Building dynamic UIs with modern JavaScript (Frontend)
+
+![React Module](./assets/react.png)
+
+Welcome to the React module! Congratulations on making it this far!
+
+In these 5 weeks we will go back to the frontend and learn how to make faster, more modern user interfaces. In the HTML and JavaScript modules you've learned all about creating webpages that that hold unchanging data. No matter who is using the website, the data will always be the same. We call this a `static website`. At the same time you've build various HTML pages so the user is able to access various parts of the website. We call this a `multi-page application (MPA)`
+
+In the Node.js module you've learned about how to change the content of the page, based on the user's input, using a `templating engine`. Type in a keyword and the server sends back a `template` with customized data. We call this a `dynamic website`. However, we did it in such a way were we still had to send different pages to the client depending on the URL (for example, `/` or `/users`). This is also an MPA.
+
+In this module, however, you'll learn how to make more complex websites. Though, we won't be calling them websites anymore: they'll be `web applications`. They're not just informational, but allow the user to interact with it. This similar to any application on your desktop. These React applications will also deal with `dynamic data`: its `state` changes depending on who's using it.
+
+Besides being dynamic, React applications also are `single page applications (SPA)`. Essentially, this means that on loading the whole application (every page and its contents) is accessible to the user, without the need to send requests to the server to get another page.
+
+## Learning goals
+
+In order to successfully complete this module you will need to master the following:
+
+- Understand the React way of thinking about `user interfaces`
+- Know the importance and place of `state` and how to pass it down
+- Be able to work with different `lifecycle hooks`
+- Distinguish between `class-based versus function-based components`
+- Recognize the utility of `modularization`
+- Putting emphasis on writing reusable code (`components`)
+- How to handle `client-side routing`
+
+## How to use this repository
+
+This repository consists of 3 essential parts:
+
+1. `Reading materials`: this document contains all the required theory you need to know _**while**_ you're coding. It's meant as both study material and as a reference to understand what you're doing.
+2. `Homework`: this document contains the instructions for each week's homework.
+3. `Lesson Plans`: this part is meant for teachers as a reference. However, as a student don't be shy to take a look at it as well!
+
+After your first class you should start off with checking the `reading materials` for that week. At the beginning that would be the [Week 1 Reading](/Week1/README.md). Study all the concepts and try to get the gist of everything. After, you can get started with the `homework` for that week.
+
+If you have any questions or if something is not entirely clear ¯\\\_(ツ)\_/¯, please ask/comment on Slack!
+
+## Before you start
+
+In order to properly work through this module smoothly we're going to use software that will allow us to write React applications with ease. It's called `create-react-app`.
+
+Go to your command line and execute the following:
+
+```
+npm install -g create-react-app
+```
+
+Now verify that you have it by executing the following:
+
+```
+create-react-app --version
+```
+
+It should be at least version `2.1.x`.
 
 ## Planning
-| Week | Topic | Read | In Class | Homework |
-| ---- | ----- | ---- | -------- | -------- |
-| 1. | React Components | [JSX](https://reactjs.org/docs/introducing-jsx.html), [Elements](https://reactjs.org/docs/rendering-elements.html), [Components and Props](https://reactjs.org/docs/components-and-props.html) | [W1 Lesson Plan](documentation/lesson-plans/W1-lesson-plan.md) | [W1 Homework](documentation/homework/W1-homework.md) |
-| 2. | State and Lifecycle | [Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html), [Events](https://reactjs.org/docs/handling-events.html), [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html), [List and Keys](https://reactjs.org/docs/lists-and-keys.html) | [W2 Lesson Plan](documentation/lesson-plans/W2-lesson-plan.md) | [W2 Homework](documentation/homework/W2-homework.md) |
-| 3. | Forms and Managing State | [Forms](https://reactjs.org/docs/forms.html), [Manage State](https://reactjs.org/docs/lifting-state-up.html), [Thinking in React](https://reactjs.org/docs/thinking-in-react.html) | [W3 Lesson Plan](documentation/lesson-plans/W3-lesson-plan.md) | [W3 Homework](documentation/homework/W3-homework.md) |
-| 4. | API Integration | [Component Lifecycle](https://reactjs.org/docs/react-component.html) and [Fetch](https://reactjs.org/docs/faq-ajax.html) |  [W4 Lesson Plan](documentation/lesson-plans/W4-lesson-plan.md) | [W4 Homework](documentation/homework/W4-homework.md) |
-| 5. | Flux & MobX | [MobX](https://mobx.js.org/), [Flux Concepts](https://github.com/facebook/flux/tree/master/examples/flux-concepts) | [W5 Lesson Plan](documentation/lesson-plans/W5-lesson-plan.md) | [W5 Homework](documentation/homework/W5-homework.md) |
 
-## Read up before we get started
+| Week | Topics                                          | Reading Materials                | Homework                         | Lesson Plans                            |
+| ---- | ----------------------------------------------- | -------------------------------- | -------------------------------- | --------------------------------------- |
+| 1.   | What is React, JSX, Props, Deploy a static site | [Readings W1](./week1/README.md) | [Homework W1](./week1/MAKEME.md) | [Lesson Plan W1](./week1/LESSONPLAN.md) |
+| 2.   | State I, Hooks I, API calls, Forms              | [Readings W2](./week2/README.md) | [Homework W2](./week2/MAKEME.md) | [Lesson Plan W2](./week2/LESSONPLAN.md) |
+| 3.   | State II, Hooks II, Third party components      | [Readings W3](./week3/README.md) | [Homework W3](./week3/MAKEME.md) | [Lesson Plan W3](./week3/LESSONPLAN.md) |
+| 4.   | Context, Client-side routing                    | [Readings W4](./week4/README.md) | [Homework W4](./week4/MAKEME.md) | [Lesson Plan W4](./week4/LESSONPLAN.md) |
+| 5.   | Test                                            | [Details](./week5/test.md)       | -                                | -                                       |
 
-Watch this video from Facebook about why they started React:
+## Finished?
 
-https://youtu.be/nYkdrAPrdcw
+Did you finish the module? Impressive!
 
-Also be sure you're familiar with ES6-syntax. See this video about ES6 (the video is in Node, but the syntax for React is the same):
+If you feel ready for the **final** challenge, click [here](https://www.github.com/HackYourFuture/Project) to go to Project!
 
-https://www.lynda.com/Node-js-tutorials/Switching-ES6-Node-js/546100-2.html
+_The HackYourFuture curriculum is subject to CC BY copyright. This means you can freely use our materials, but just make sure to give us credit for it :)_
 
-This is a handy reference of all features of ES6:
-
-http://es6-features.org
-
-Please *do not worry about understanding all*. However, do make sure you understand the following, as we'll be using them a lot:
-
-- http://es6-features.org/#Constants
-- http://es6-features.org/#ObjectMatchingShorthandNotation
-- http://es6-features.org/#RestParameter
-- http://es6-features.org/#SpreadOperator
-
-Read about React here:
-
-https://facebook.github.io/react/
-
-## Handing in homework
-Take a look at [this video](https://www.youtube.com/watch?v=-o0yomUVVpU&index=2&list=PLVYDhqbgYpYUGxRdtQdYVE5Q8h3bt6SIA) made by Daan, he explains how your homework needs to be handed in.
-
-Also review the Git [workflow material](https://github.com/HackYourFuture/Git/blob/master/Lecture-3.md) from the JavaScript3 module, use this as a reference.
-
-## Slides
-
-Find the slides used in class here:
-
-* [Slides Week 1](https://docs.google.com/presentation/d/1Uack4RWXgFj5ZoP9lheZmagY1KDP_Swnerul2PO9f8o/edit)
-
-For reference, slides from HYF NL: https://slides.com/joostlubach/react-class/live
-
-## Learning examples
-
-### Counter [[source](/examples/counter)]
-
-Demonstrates:
-
-1. Most basic implementation of component state
-2. Handler functions bound to `onClick`
-
-![Clocks Example Screenshot](/documentation/example-screenshots/counter.png)
-
-### Clocks [[source](/examples/clocks)]
-
-Follows the React docs clock example [here](https://reactjs.org/docs/state-and-lifecycle.html). Uses [momentjs](https://github.com/moment/moment) and [moment-timezone](https://github.com/moment/moment-timezone) for datetime functionality.
-
-Demonstrates:
-
-1. Using both state and props in a component tree
-2. Passing event handlers as props
-3. Rendering components in a loop
-4. Conditional JSX rendering (header count)
-5. State-bound lifecycle and lifecycle events (clock interval)
-
-![Clocks Example Screenshot](/documentation/example-screenshots/clocks.png)
-
-## Real world example
-
-Have a look at Mattijn's real world React project:
-
-https://github.com/mattijnlahuis/beertools
-
-*The HackYourFuture curriculum is subject to CC BY copyright. This means you can freely use our materials, but just make sure to give us credit for it :)*
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
