@@ -1,9 +1,56 @@
-node_modules
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/week-1-project/node_modules
+/week-2-project/node_modules
+/week-3-project/node_modules
+
+/week-1-project/.pnp
+/week-2-project/.pnp
+/week-3-project/.pnp
+
+/week-1-project/.pnp.js
+/week-2-project/.pnp.js
+/week-3-project/.pnp.js
+
+
+# testing
+/week-1-project/coverage
+/week-2-project/coverage
+/week-3-project/coverage
+
+# production
+/week-1-project//build
+/week-2-project/build
+/week-3-project/build
+
+# misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+
+/week-1-project/.env.local
+/week-2-project/.env.local
+/week-3-project/.env.local
+
+/week-1-project/.env.development.local
+/week-2-project/.env.development.local
+/week-3-project/.env.development.local
+
+/week-1-project/.env.test.local
+/week-2-project/.env.test.local
+/week-3-project/.env.test.local
+
+/week-1-project/.env.production.local
+/week-2-project/.env.production.local
+/week-3-project/.env.production.local
+
+/week-1-project/npm-debug.log*
+/week-2-project/npm-debug.log*
+/week-3-project/npm-debug.log*
+
+/week-1-project/yarn-debug.log*
+/week-2-project/yarn-debug.log*
+/week-3-project/yarn-debug.log*
+
+/week-1-project/yarn-error.log*
+/week-2-project/yarn-error.log*
+/week-3-project/yarn-error.log*
