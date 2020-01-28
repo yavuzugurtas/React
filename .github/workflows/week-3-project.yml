@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Week 3 Project
 
 on: [push]
 
