@@ -40,3 +40,11 @@ Similar to [npm](https://www.npmjs.com/). As this package manager is recommended
 
 - Navigate to the a week directory (e.g. `week-1-project`) in your document explorer.
 - Open the README.md file.
+
+## Status
+
+![Week 1 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%201%20Project/badge.svg)
+
+![Week 2 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%202%20Project/badge.svg)
+
+![Week 3 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%203%20Project/badge.svg)
