@@ -36,7 +36,7 @@ Similar to [npm](https://www.npmjs.com/). As this package manager is recommended
 
 [Yarn](https://yarnpkg.com/lang/en/) will install the dependencies defined in [package.json](./package.json).
 
-## Getting started
+## Let's start
 
 - Navigate to the a week directory (e.g. `week-1-project`) in your document explorer.
 - Open the README.md file.
