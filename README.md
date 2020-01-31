@@ -47,4 +47,8 @@ Similar to [npm](https://www.npmjs.com/). As this package manager is recommended
 
 ![Week 2 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%202%20Project/badge.svg)
 
-![Week 3 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%203%20Project/badge.svg)
+![Week 3 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%203%20Project/badge.svg) 
+
+![Week 4 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%204%20Project/badge.svg)
+
+![Week 5 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%205%20Project/badge.svg)
