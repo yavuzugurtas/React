@@ -43,12 +43,12 @@ Similar to [npm](https://www.npmjs.com/). As this package manager is recommended
 
 ## Status
 
-![Week 1 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%201%20Project/badge.svg)
+![Week 1 Project](https://github.com/HackYourFutureBelgium/React/workflows/week-1-project/badge.svg)
 
-![Week 2 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%202%20Project/badge.svg)
+![Week 2 Project](https://github.com/HackYourFutureBelgium/React/workflows/week-2-project/badge.svg)
 
-![Week 3 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%203%20Project/badge.svg) 
+![Week 3 Project](https://github.com/HackYourFutureBelgium/React/workflows/week-3-project/badge.svg) 
 
-![Week 4 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%204%20Project/badge.svg)
+![Week 4 Project](https://github.com/HackYourFutureBelgium/React/workflows/week-4-project/badge.svg)
 
-![Week 5 Project](https://github.com/HackYourFutureBelgium/React/workflows/Week%205%20Project/badge.svg)
+![Week 5 Project](https://github.com/HackYourFutureBelgium/React/workflows/week-5-project/badge.svg)
