@@ -8,7 +8,7 @@ function App(props) {
             {props.articles ? props.articles.map(article => <NewsArticle />) : null}
             {props.articles ? (
                 <p data-testid="reading-length">
-                    Reading all article will take you {props.calculateReadingLength(props.articles.reduce((accumulator, article) => accumulator + article.text , ''))} minutes
+                    Reading all article will take you {props.calculateReadingLength && props.calculateReadingLength(props.articles.reduce((accumulator, article) => accumulator + article.text , ''))} minutes
                 </p>
             ): null}
         </section>
