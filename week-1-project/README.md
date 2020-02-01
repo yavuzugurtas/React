@@ -44,7 +44,7 @@ https://reactjs.org/docs/components-and-props.html
 
 Take a look at the tests in [props.test.js](./src/__tests__/props.test.js) to get started with the exercise.
 
-### Rendering Your App
+## Rendering Your App
 
 No fun without seeing anything right ?!
 Open the development server for your app with
