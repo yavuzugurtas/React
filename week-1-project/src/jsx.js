@@ -6,7 +6,7 @@ function App() {
 
     return (
         <section>
-            <h1 className={"title"}>{incorrectTitle}</h1>
+            <h1 className={"title"}>{title}</h1>
             <p data-testid="injection">{'<script>alert("danger");</script>'}</p>
             <form>
                 <label data-testid="label" htmlFor="input-demo">Demo:</label>

@@ -13,6 +13,8 @@ test('Renders as html', async () => {
     // When rendering JSX is converted to HTML.
     render(<App />);
 
+    // console.log(document.body.innerHTML);
+
     expect(document.body.innerHTML).toContain('<div>');
 });
 
@@ -21,6 +23,8 @@ test('App uses embedded expressions', async () => {
     // https://reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx
 
     // Take a look at the implementation of App
+    // From the test below figure out what the mistake is in App
+
     const { findByText } = render(<App />);
 
     const element = await findByText('My App');
@@ -37,6 +41,7 @@ test('App specifies attributes', async () => {
 
     const element = await findByText('My App');
 
+    // Fix one of the statements
     expect(element.className).toBeDefined();
     expect(element.className).toEqual('');
 });
@@ -46,6 +51,7 @@ test('App renders with an input and label defining for', async () => {
 
     const label = await getByTestId('label');
 
+    // Fix the assert statement
     expect(label.getAttribute('for')).toEqual('');
 });
 
@@ -57,5 +63,6 @@ test('App prevents Injection Attacks', async () => {
 
     const element = await getByTestId('injection');
 
+    // Fix the assert statement
     expect(element.innerHTML).toEqual('');
 });
