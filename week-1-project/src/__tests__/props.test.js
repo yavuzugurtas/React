@@ -26,7 +26,7 @@ test('The component App uses and renders with other props', async () => {
 });
 
 
-test('Given and additional props renders with description', async () => {
+test('Given a new prop the app renders with a description', async () => {
     const { getByTestId } = render(<App title="My App" />);
 
     const element = await getByTestId('description');
@@ -46,7 +46,7 @@ test('Render with a state object using the spread operator ', async () => {
     expect(element.innerHTML).toEqual('My App');
 });
 
-test('Renders articles ', async () => {
+test('Renders 3 articles when given 3 articles', async () => {
     const data = {
         title: 'My App',
         articles: [
