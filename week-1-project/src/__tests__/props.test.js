@@ -167,6 +167,11 @@ test('Passing functions as props: part 2', async () => {
 
     const element = await getByTestId('reading-length');
 
+    // Can you figure out how this code is supposed to work ?
+    // The function from the props is being called in a somewhat complicated way.
+    // Figure out what is happening and what an appropriate fix would be.
+    // You will only need to modify calculateReadingLength above
+
     expect(element.innerHTML).toEqual('Reading all article will take you 2 minutes');
 });
 
