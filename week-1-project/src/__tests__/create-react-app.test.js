@@ -60,7 +60,7 @@ test('Babel', () => {
 
   // The implementation op the function above use optional chaining
   // Currently this is still a proposal https://github.com/tc39/proposal-optional-chaining
-  // Babel makes sure we can already use it by transpiling the
+  // Babel makes sure we can already use it by transpiling the code
 
   // This test is purely informative
   expect(result).toEqual(undefined);
