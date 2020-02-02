@@ -169,3 +169,12 @@ test('Passing functions as props: part 2', async () => {
 
     expect(element.innerHTML).toEqual('Reading all article will take you 2 minutes');
 });
+
+test('BONUS, I have solved the warning about the unique key', async () => {
+
+    // When you run the test you might have noticed this warning "Warning: Each child in a list should have a unique "key" prop."
+    // Can you solve the problem ?
+
+    const iSolvedTheProblem = false;
+    expect(iSolvedTheProblem).toBeTruthy();
+});
