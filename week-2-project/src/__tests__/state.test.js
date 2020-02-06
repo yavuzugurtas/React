@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import { Ex1, Ex2, Ex3, Ex4, Ex5, Ex6, Ex7, Ex8, Ex9, Ex10, Ex11, Ex12, Ex13, Ex14 } from '../hooks';
+import { Ex1, Ex2, Ex3, Ex4, Ex5, Ex6, Ex7, Ex8, Ex9, Ex10, Ex11, Ex12, Ex13, Ex14 } from '../state';
 
-test('Exercice 1', () => {
+test('Exercise 1: updating state', () => {
   const { getByText } = render(<Ex1 />);
 
   // find intial text
@@ -17,7 +17,7 @@ test('Exercice 1', () => {
 
 });
 
-test('Exercice 2', () => {
+test('Exercise 2: adding some business logic when updating the state', () => {
   const { getByText } = render(<Ex2 />);
 
   // find intial text
@@ -38,7 +38,7 @@ test('Exercice 2', () => {
 
 });
 
-test('Exercice 3', () => {
+test('Exercise 3: adding some more complicated business logic when updating the state', () => {
   const { getByText } = render(<Ex3 />);
 
   // find intial text
@@ -54,18 +54,29 @@ test('Exercice 3', () => {
   // click on button again
   fireEvent.click(button)
 
-  // find original text
-  getByText(/Hello 世界/i);
+  // find updated text
+  getByText(/Hallo Wereld/i);
 
   // click on button again again
   fireEvent.click(button)
 
   // find updated text
-  getByText(/Hello World/i)
+  getByText(/Bonjour le monde/i)
 
+  // click on button again again
+  fireEvent.click(button)
+
+  // find updated text
+  getByText(/Hallo Welt/i)
+
+  // click on button again
+  fireEvent.click(button)
+
+  // find original text
+  getByText(/Hello 世界/i);
 });
 
-test('Exercice 4', () => {
+test('Exercise 4: using state', () => {
   const { getByText } = render(<Ex4 />);
 
   // find intial text
@@ -82,7 +93,7 @@ test('Exercice 4', () => {
 
 });
 
-test('Exercice 5', () => {
+test('Exercise 5: updating state', () => {
   const { getByText } = render(<Ex5 />);
 
   // find intial value
@@ -101,7 +112,7 @@ test('Exercice 5', () => {
 
 });
 
-test('Exercice 6', () => {
+test('Exercise 6: updating a more complex state', () => {
   const { getByText } = render(<Ex6 />);
 
   // find intial value
@@ -132,7 +143,7 @@ test('Exercice 6', () => {
 
 });
 
-test('Exercice 7', () => {
+test('Exercise 7: updating state some more', () => {
   const { getByText } = render(<Ex7 />);
 
   getByText("0")
@@ -142,7 +153,7 @@ test('Exercice 7', () => {
   fireEvent.click(button)
 
   // find count
-  getByText("1")
+  getByText(  "1")
   fireEvent.click(button)
   fireEvent.click(button)
   fireEvent.click(button)
@@ -151,7 +162,7 @@ test('Exercice 7', () => {
 
 });
 
-test('Exercice 8', () => {
+test('Exercise 8: multiple things mutating state', () => {
   const { getByText, getAllByRole} = render(<Ex8 />);
 
   const buttons = getAllByRole('button')
@@ -163,7 +174,7 @@ test('Exercice 8', () => {
 
 });
 
-test('Exercice 9', () => {
+test('Exercise 9: update state again', () => {
   const { getByText, getAllByRole} = render(<Ex9 />);
 
   const buttons = getAllByRole('button')
@@ -175,7 +186,7 @@ test('Exercice 9', () => {
 
 });
 
-test('Exercice 10', () => {
+test('Exercise 10: update and rendering more complex states', () => {
   const { queryByText, getByText, getByRole} = render(<Ex10 />);
 
   getByText("docker")
@@ -189,7 +200,7 @@ test('Exercice 10', () => {
 
 });
 
-test('Exercice 11', () => {
+test('Exercise 11: more complex state update', () => {
   const { queryByText, getByText, getByRole} = render(<Ex11 />);
 
   const default_list = ['ipsizzle', 'nullizzle', 'sapizzle', 'velizzle', 'crackalackin', 'maurizzle', 'rhoncizzle']
@@ -208,7 +219,7 @@ test('Exercice 11', () => {
   }
 });
 
-test('Exercice 12', () => {
+test('Exercise 12: passing props and setting state', () => {
   const my_list = ['surf', 'fencing', 'taekwondo']
   const { queryByText, getByText, getByRole} = render(<Ex12 base_list={my_list}/>);
 
@@ -226,7 +237,7 @@ test('Exercice 12', () => {
   }
 });
 
-test('Exercice 13', () => {
+test('Exercise 13: 2 different state mutations', () => {
   const default_list = ['ipsizzle', 'nullizzle', 'sapizzle', 'velizzle', 'crackalackin', 'maurizzle', 'rhoncizzle']
   const { queryByText, getByText, getByRole} = render(<Ex13/>);
 
@@ -257,7 +268,7 @@ test('Exercice 13', () => {
 
 });
 
-test('Exercice 14', () => {
+test('Exercise 14: 2 different state mutations with props', () => {
   const my_list = ['surf', 'fencing', 'taekwondo']
   const { queryByText, getByText, getByRole} = render(<Ex14 base_list={my_list}/>);
 
