@@ -30,7 +30,7 @@ Some tests you require you to fix an assertion others require you to fix somethi
 All of the exercises will involve hooks.
 They will allow us to keep state in Components. Trigger side effects when rendering and much more.
 
-https://reactjs.org/docs/hooks-custom.html
+https://reactjs.org/docs/hooks-overview.html
 
 ### State hooks
 
