@@ -51,6 +51,25 @@
 					<section>
 						<h2>Review</h2>
 					</section>
+					<section>
+						<h3>Class Based VS Functional Component</h3>
+					</section>
+					<section>
+						<pre><code class="hljs javascript">
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+						</code></pre>
+					</section>
+					<section>
+						<pre><code class="hljs javascript">
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+						</code></pre>
+					</section>
 				</section>
 				<section>
 					<p>
