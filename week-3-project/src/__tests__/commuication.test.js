@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import {FruitApp, FruitAppWithBalance, InterActiveFruits} from '../communication';
+import {FruitApp, FruitAppWithBalance, FruitsAndVegetables, InterActiveFruits} from '../communication';
 
 test('InterActiveFruits: does parent child communication', async () => {
     const { queryAllByTestId, getByText } = render(<InterActiveFruits />);
@@ -145,4 +145,13 @@ test('FruitAppWithBalance: supports peaches,', async () => {
     fireEvent.click(button);
 
     getByText('🍑')
+});
+
+test('FruitsAndVegetables: controlled inputs', async () => {
+    const { _ } = render(<FruitsAndVegetables />);
+
+    // I did not have time to write a test for this 😅 please test the FruitsAndVegetables rendered and see what the bug is.
+
+    const IHaveFixedTheBug = false;
+    expect(IHaveFixedTheBug).toBeTruthy();
 });

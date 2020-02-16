@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {FruitApp, FruitAppWithBalance, InterActiveFruits} from "./communication";
+import {FruitApp, FruitAppWithBalance, FruitsAndVegetables, InterActiveFruits} from "./communication";
 
 import './index.css';
 import {InteractivePokedex, Pokedex} from "./api";
@@ -22,6 +22,9 @@ const App = () => {
 
                 <h3>Fruit App With Balance Indicator</h3>
                 <FruitAppWithBalance/>
+
+                <h3>Fruits and Vegetables</h3>
+                <FruitsAndVegetables/>
             </section>
 
             <section className="app_goal">
