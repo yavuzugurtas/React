@@ -11,7 +11,7 @@ const Ex1 = function () {
     return (
         <div>
             <p>{text}</p>
-            <button onClick={() => { setText() /* Fix something here */ }}>
+            <button onClick={() => { setText('Hello World')}}>
                 Translation please
             </button>
         </div>
@@ -30,8 +30,10 @@ const Ex2 = function () {
         <div>
             <p>{text[idx]}</p>
             <button onClick={() => {
-                /* Write some logic here */
-            }}>
+              if (idx===0) {setIdx(1);
+                }
+              else {setIdx(0); }
+        }}>
                 Translation please
             </button>
         </div>
@@ -49,10 +51,13 @@ const Ex3 = function () {
     const [idx, setIdx] = useState(0);
     return (
         <div>
-            <p>{text[idx]}</p>
-            <button onClick={() => {
-                /* Write some logic here */
-            }}>
+        <p>{text[idx]}</p>
+        <button onClick={() => { 
+              if (idx<4){setIdx(1+idx);
+            }
+              else {setIdx(0); 
+            }
+        }}>
                 Translation please
             </button>
         </div>
@@ -74,9 +79,11 @@ const Ex4 = function () {
         <div>
             <p>{text[idx]}</p>
             <button onClick={() => {
-                /* Write some logic here */
+                if (idx ===0) {setIdx(1); } 
+                else {setIdx(0) ;
+                }
             }}>
-                Translation to {/* Insert a variable here */} please
+                Translation to {lang[idx]}  please
             </button>
         </div>
     )
@@ -93,7 +100,8 @@ const Ex5 = function () {
     return (
         <div>
             <p>{count}</p>
-            <button /* Add something here */>
+            <button onClick={() => { 
+              {setCount(1+count);}}}>
                 Click me!
             </button>
         </div>
@@ -108,11 +116,14 @@ const Ex5 = function () {
 // No? too bad...
 
 const Ex6 = function () {
-    const [fib, setFib] = useState( /* Set the initial value of the state here */);
+    const [fib, setFib] = useState( [0,1]/* Set the initial value of the state here */);
     return (
         <div>
-            <p>{/* The value you should put here is: `fib[0]`, but this will only work after you set the initial state */}</p>
-            <button onClick={() => { /* Write a function to update the state */ }}>
+            <p>{fib[0]/* The value you should put here is: `fib[0]`, but this will only work after you set the initial state */}</p>
+            <button onClick={() => {
+                setFib([
+                    fib[1],(fib[0]+fib[1])])
+                /* Write a function to update the state */}}>
                 Click me!
             </button>
         </div>
@@ -125,11 +136,12 @@ const Ex6 = function () {
 // initial value should be 0
 
 const Ex7 = function () {
-    /* Init the state here */
+    const [ref, setRef] = useState(0)
     return (
         <div>
-            <p>{/* Set a value here */}</p>
-            <button /* Add something here */>
+            <p>{ref/* Set a value here */}</p>
+            <button  onClick={() => {{setRef(ref+1);
+            }}}>
                 click me
             </button>
         </div>
@@ -146,17 +158,20 @@ const Ex7 = function () {
 // Set the p tag text to: "I like ..." where ... is the text value of the button
 
 const Ex8 = function () {
-    /* init state and function to update it here */
+    const [meal, setMeal] = useState('')/* init state and function to update it here */
     return (
         <div>
-            <p>I like {/* Add something here */}</p>
-            <button /* Add something here */>
+            <p>I like {meal}</p>
+            <button onClick={() => 
+            setMeal('fruit')}>
                 fruit
             </button>
-            <button /* Add something here */>
+            <button onClick={() => 
+                setMeal('meat')}>
                 meat
             </button>
-            <button /* Add something here */>
+            <button onClick={() => 
+                setMeal('vegetables')}>
                 vegetables
             </button>
         </div>
@@ -175,14 +190,16 @@ const Ex8 = function () {
 // Append it to the initial 'Last click'
 
 const Ex9 = function () {
-    /* init state and function to update it here */
+    const [last,setLast] = useState('')/* init state and function to update it here */
     return (
         <div>
-            <p>Last click: {/* Add something here */}</p>
-            <button /* Add something here */>
+            <p>Last click: {last}</p>
+            <button  onClick={() => 
+            setLast('UPPER')}>
                 UPPER
             </button>
-            <button /* Add something here */>
+            <button onClick={() => 
+            setLast('LOWER')}>
                 LOWER
             </button>
         </div>
@@ -199,15 +216,20 @@ const Ex9 = function () {
 // On button click, a new list item should be appended in the unordered list. It should have as value "containerd"
 
 const Ex10 = function () {
-    const [items, setItems] = useState(['docker', 'kubernetes']);
+    const [items, setItems] = useState([‘docker’, ‘kubernetes’]);
     return (
         <div>
             <ul>
                 {
                     /* render the items as an li here */
+                    items.map( (a) => (<li>{a}</li>))
                 }
             </ul>
-            <button onClick={() => { /* Set the items here */  }}>
+            <button onClick={() => { /* Set the items here */
+                const newItems = [...items];
+                newItems.push(‘containerd’);
+                setItems(newItems)
+            }}>
                 Add element
             </button>
         </div>
