@@ -25,7 +25,7 @@ https://reactjs.org/docs/thinking-in-react.html
 
 ## Product Page
 
-Code in class with
+Code in class under guidance.
 
 https://reactjs.org/docs/thinking-in-react.html
 
